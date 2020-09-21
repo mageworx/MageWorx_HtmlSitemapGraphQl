@@ -7,64 +7,64 @@ type Query {
     ): MwHtmlSitemap @doc(description: "The query returns information about a HTML Sitemap") @resolver(class: "MageWorx\\HtmlSitemapGraphQl\\Model\\Resolver\\HtmlSitemap")
 }
 
-type MwHtmlSitemap @doc(description: "MwHtmlSitemap defines all Html Sitemap information") {
+type MwHtmlSitemap @doc(description: "MwHtmlSitemap defines all HTML Sitemap information") {
     title: String @doc(description: "Title")
     meta_description: String @doc(description: "Meta Description")
     meta_keywords: String @doc(description: "Meta Keywords")
-    categories: MwHtmlSitemapCategories @doc(description: "Html Sitemap Categories") @resolver(class: "MageWorx\\HtmlSitemapGraphQl\\Model\\Resolver\\HtmlSitemap\\Categories")
-    cms_pages: MwHtmlSitemapCmsPages @doc(description: "Html Sitemap Cms Pages") @resolver(class: "MageWorx\\HtmlSitemapGraphQl\\Model\\Resolver\\HtmlSitemap\\CmsPages")
-    additional_links: MwHtmlSitemapAdditionalLinks @doc(description: "Html Sitemap Additional Links") @resolver(class: "MageWorx\\HtmlSitemapGraphQl\\Model\\Resolver\\HtmlSitemap\\AdditionalLinks")
-    custom_links: MwHtmlSitemapCustomLinks @doc(description: "Html Sitemap Custom Links") @resolver(class: "MageWorx\\HtmlSitemapGraphQl\\Model\\Resolver\\HtmlSitemap\\CustomLinks")
+    categories: MwHtmlSitemapCategories @doc(description: "HTML Sitemap Categories") @resolver(class: "MageWorx\\HtmlSitemapGraphQl\\Model\\Resolver\\HtmlSitemap\\Categories")
+    cms_pages: MwHtmlSitemapCmsPages @doc(description: "HTML Sitemap CMS Pages") @resolver(class: "MageWorx\\HtmlSitemapGraphQl\\Model\\Resolver\\HtmlSitemap\\CmsPages")
+    additional_links: MwHtmlSitemapAdditionalLinks @doc(description: "HTML Sitemap Additional Links") @resolver(class: "MageWorx\\HtmlSitemapGraphQl\\Model\\Resolver\\HtmlSitemap\\AdditionalLinks")
+    custom_links: MwHtmlSitemapCustomLinks @doc(description: "HTML Sitemap Custom Links") @resolver(class: "MageWorx\\HtmlSitemapGraphQl\\Model\\Resolver\\HtmlSitemap\\CustomLinks")
 }
 
-type MwHtmlSitemapCategories @doc(description: "Html Sitemap Categories information") {
-    items: [MwHtmlSitemapCategory] @doc(description: "An array of Html Sitemap Categories")
+type MwHtmlSitemapCategories @doc(description: "HTML Sitemap Categories information") {
+    items: [MwHtmlSitemapCategory] @doc(description: "An array of HTML Sitemap Categories")
 }
 
-type MwHtmlSitemapCategory @doc(description: "MwHtmlSitemapCategory defines all Html Sitemap Category information") {
+type MwHtmlSitemapCategory @doc(description: "MwHtmlSitemapCategory defines all HTML Sitemap Category information") {
     title: String @doc(description: "Category Title")
     url: String @doc(description: "Category URL")
     level: Int @doc(description: "Indicates the depth of the category within the tree")
     products: MwHtmlSitemapProducts @doc(description: "The list of products assigned to the category.")
 }
 
-type MwHtmlSitemapProducts @doc(description: "Html Sitemap Products information") {
-    items: [MwHtmlSitemapProduct] @doc(description: "An array of Html Sitemap Products")
+type MwHtmlSitemapProducts @doc(description: "HTML Sitemap Products information") {
+    items: [MwHtmlSitemapProduct] @doc(description: "An array of HTML Sitemap Products")
 }
 
-type MwHtmlSitemapProduct @doc(description: "MwHtmlSitemapProduct defines all Html Sitemap Product information") {
+type MwHtmlSitemapProduct @doc(description: "MwHtmlSitemapProduct defines all HTML Sitemap Product information") {
     title: String @doc(description: "Product Title")
     url: String @doc(description: "Product URL")
 }
 
-type MwHtmlSitemapCmsPages @doc(description: "Html Sitemap Cms Pages information") {
-    items: [MwHtmlSitemapCmsPage] @doc(description: "An array of Html Sitemap Cms Pages")
+type MwHtmlSitemapCmsPages @doc(description: "HTML Sitemap CMS Pages information") {
+    items: [MwHtmlSitemapCmsPage] @doc(description: "An array of HTML Sitemap CMS Pages")
 }
 
-type MwHtmlSitemapCmsPage @doc(description: "MwHtmlSitemapCmsPage defines all Html Sitemap Cms Page information") {
-    title: String @doc(description: "Cms Page Title")
-    url: String @doc(description: "Cms Page URL")
+type MwHtmlSitemapCmsPage @doc(description: "MwHtmlSitemapCmsPage defines all HTML Sitemap CMS Page information") {
+    title: String @doc(description: "CMS Page Title")
+    url: String @doc(description: "CMS Page URL")
 }
 
-type MwHtmlSitemapAdditionalLinks @doc(description: "Html Sitemap Additional Links information") {
-    items: [MwHtmlSitemapAdditionalLink] @doc(description: "An array of Html Sitemap Additional Links")
+type MwHtmlSitemapAdditionalLinks @doc(description: "HTML Sitemap Additional Links information") {
+    items: [MwHtmlSitemapAdditionalLink] @doc(description: "An array of HTML Sitemap Additional Links")
 }
 
-type MwHtmlSitemapAdditionalLink @doc(description: "MwHtmlSitemapAdditionalLink defines all Html Sitemap Additional Link information") {
+type MwHtmlSitemapAdditionalLink @doc(description: "MwHtmlSitemapAdditionalLink defines all HTML Sitemap Additional Link information") {
     title: String @doc(description: "Additional Link Title")
     url: String @doc(description: "Additional Link URL")
 }
 
-type MwHtmlSitemapCustomLinks @doc(description: "Html Sitemap Custom Links information") {
-    sections: [MwHtmlSitemapCustomLinksSection] @doc(description: "An array of Html Sitemap Custom Link Sections")
+type MwHtmlSitemapCustomLinks @doc(description: "HTML Sitemap Custom Links information") {
+    sections: [MwHtmlSitemapCustomLinksSection] @doc(description: "An array of HTML Sitemap Custom Link Sections")
 }
 
-type MwHtmlSitemapCustomLinksSection @doc(description: "MwHtmlSitemapCustomLinksSection defines all Html Sitemap Custom Links Section information") {
+type MwHtmlSitemapCustomLinksSection @doc(description: "MwHtmlSitemapCustomLinksSection defines all HTML Sitemap Custom Links Section information") {
     section_title: String @doc(description: "Custom Links Section Title")
-    items: [MwHtmlSitemapCustomLink] @doc(description: "An array of Html Sitemap Custom Links")
+    items: [MwHtmlSitemapCustomLink] @doc(description: "An array of HTML Sitemap Custom Links")
 }
 
-type MwHtmlSitemapCustomLink @doc(description: "MwHtmlSitemapCustomLink defines all Html Sitemap Custom Link information") {
+type MwHtmlSitemapCustomLink @doc(description: "MwHtmlSitemapCustomLink defines all HTML Sitemap Custom Link information") {
     title: String @doc(description: "Custom Link Title")
     url: String @doc(description: "Custom Link URL")
 }
