@@ -3,7 +3,7 @@
     "description": "N/A",
     "type": "magento2-module",
     "require": {
-        "magento/framework": "102.0.*",
+        "magento/framework": ">=102.0.0 < 104",
         "mageworx/module-htmlsitemap": ">= 2.4.1"
     },
     "license": [
