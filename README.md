@@ -7,7 +7,7 @@ GraphQL API module for Mageworx [Magento 2 SEO Suite Ultimate](https://www.magew
 - Download this module and upload it to the `app/code/MageWorx/HtmlSitemapGraphQl` directory *(create "HtmlSitemapGraphQl" first if missing)*
 
 **2) Installation using composer (from packagist)**
-- Execute the following command: `composer require MageWorx_HtmlSitemapGraphQl`
+- Execute the following command: `composer require mageworx/module-htmlsitemap-graph-ql`
 
 ## How to use
 **HtmlSitemapGraphQl** module allows displaying the HTML sitemap:
