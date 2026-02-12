@@ -31,7 +31,7 @@ class HtmlSitemap
      * @param int|null $storeId
      * @return array
      */
-    public function getData(int $storeId = null): array
+    public function getData(?int $storeId = null): array
     {
         return [
             'title'            => $this->helper->getTitle($storeId),

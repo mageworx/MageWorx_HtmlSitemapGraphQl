@@ -41,7 +41,7 @@ class CustomLinks implements ResolverInterface
     /**
      * @inheritdoc
      */
-    public function resolve(Field $field, $context, ResolveInfo $info, array $value = null, array $args = null)
+    public function resolve(Field $field, $context, ResolveInfo $info, ?array $value = null, ?array $args = null)
     {
         $storeId = isset($value['store_id']) ? (int)$value['store_id'] :
             (int)$context->getExtensionAttributes()->getStore()->getId();
@@ -55,7 +55,7 @@ class CustomLinks implements ResolverInterface
      * @param int|null $storeId
      * @return array|null
      */
-    protected function getCustomLinksGroupedBySection(int $storeId = null): ?array
+    protected function getCustomLinksGroupedBySection(?int $storeId = null): ?array
     {
         if (!$this->helper->isShowCustomLinks($storeId)) {
             return null;
