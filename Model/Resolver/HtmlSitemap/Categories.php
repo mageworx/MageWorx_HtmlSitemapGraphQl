@@ -59,7 +59,7 @@ class Categories implements ResolverInterface
     /**
      * @inheritdoc
      */
-    public function resolve(Field $field, $context, ResolveInfo $info, array $value = null, array $args = null)
+    public function resolve(Field $field, $context, ResolveInfo $info, ?array $value = null, ?array $args = null)
     {
         $storeId = isset($value['store_id']) ? (int)$value['store_id'] :
             (int)$context->getExtensionAttributes()->getStore()->getId();
@@ -73,7 +73,7 @@ class Categories implements ResolverInterface
      * @param int|null $storeId
      * @return array|null
      */
-    protected function getCategories(int $storeId = null): ?array
+    protected function getCategories(?int $storeId = null): ?array
     {
         if (!$this->helper->isShowCategories($storeId)) {
             return null;

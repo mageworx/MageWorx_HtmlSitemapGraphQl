@@ -41,7 +41,7 @@ class AdditionalLinks implements ResolverInterface
     /**
      * @inheritdoc
      */
-    public function resolve(Field $field, $context, ResolveInfo $info, array $value = null, array $args = null)
+    public function resolve(Field $field, $context, ResolveInfo $info, ?array $value = null, ?array $args = null)
     {
         $storeId = isset($value['store_id']) ? (int)$value['store_id'] :
             (int)$context->getExtensionAttributes()->getStore()->getId();
@@ -55,7 +55,7 @@ class AdditionalLinks implements ResolverInterface
      * @param int|null $storeId
      * @return array|null
      */
-    protected function getAdditionalLinks(int $storeId = null): ?array
+    protected function getAdditionalLinks(?int $storeId = null): ?array
     {
         if (!$this->helper->isShowLinks($storeId)) {
             return null;
@@ -90,7 +90,7 @@ class AdditionalLinks implements ResolverInterface
      * @param int|null $storeId
      * @return string
      */
-    protected function buildUrl(string $rawUrl, int $storeId = null): string
+    protected function buildUrl(string $rawUrl, ?int $storeId = null): string
     {
         $url = trim($rawUrl);
 
